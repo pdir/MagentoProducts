@@ -1,0 +1,24 @@
+{
+  "name": "MagentoProducts",
+  "version": "1.0.1",
+  "description": "Make products from different Magento installations available on your Contao website.",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pdir/MagentoProducts.git"
+  },
+  "keywords": [
+    "contao",
+    "magento",
+    "products",
+    "produkte",
+    "ajax",
+    "json",
+    "shop"
+  ],
+  "author": "pdir / digital agentur",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/pdir/MagentoProducts/issues"
+  }
+}

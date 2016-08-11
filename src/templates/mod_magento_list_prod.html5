@@ -1,0 +1,50 @@
+
+<<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<div class="ce_text block" id="products">
+
+    <br style="clear:both;" />
+</div>
+
+
+
+<script type="text/javascript">
+/*
+ * Idee & Orginal Script von mxperts.de
+ * http://www.mxperts.de/blog/magento-daten-auf-externer-domain-anzeigen/
+ */
+    $(document).ready(function()
+      {
+
+        $.ajax({
+                dataType: 'jsonp',
+                jsonp: 'jsonp_callback',
+                url: '<?php echo $this->products['url']; ?>',
+                data: { count: "<?php echo $this->cie_ccmp_list_count; ?>", catID: "<?php echo $this->products['categorie_id']; ?>"},
+            success: function (data) {
+            $.each(data.items, function(i,item){
+              var name = item.name;
+              var url = item.url;
+              var description = item.description;
+              var imageurl = item.image;
+              var price = item.price;
+
+              html = '<article class="item catId'+ data.catID + data.title +'">';
+              html += '	<img class="image" alt="" height="148" src="' + imageurl + '" />';
+              html += '	<div class="loadingPic" alt="Loading" />';
+              html += '	<h1 class="title"><a href="' +url+'" target="_blank">' + name + '</a></h1>';
+              html += '	<div class="price">' + price + '</div>';
+              html += '	<div class="description"> ' + description + '</div>';
+              html += '<br class="clear"/></article>';
+
+			  $("#products").append( html );
+              $('.loadingPic').fadeOut(1400);
+
+            });
+
+                } // Ende success
+              }); // Ende $.ajax
+            }); // Ende .ready
+</script>

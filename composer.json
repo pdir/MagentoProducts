@@ -1,0 +1,30 @@
+{
+  "name":"pdir/MagentoProducts",
+  "description":"Make products from different Magento installations available on your Contao website.",
+  "keywords":["contao", "magento", "products", "produkte", "json", "ajax", "shop"],
+  "type":"contao-module",
+  "homepage":"https://github.com/pdir/MagentoProducts",
+  "license":"LGPL-3.0+",
+  "authors":[
+    {
+      "name":"pdir / digital agentur",
+      "homepage":"https://pdir.de",
+      "role":"Developer",
+      "email": "develop@pdir.de"
+    }
+  ],
+  "support":{
+    "issues":"https://github.com/pdir/MagentoProducts/issues"
+  },
+  "require": {
+    "contao/core": ">=3.2,<4-dev",
+    "contao-community-alliance/composer-installer": "*"
+  },
+  "extra":{
+    "contao": {
+      "sources":{
+        "src": "system/modules/MagentoProducts/"
+      }
+    }
+  }
+}

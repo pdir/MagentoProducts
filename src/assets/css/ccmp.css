@@ -1,0 +1,9 @@
+
+#products { height: auto; }
+#products .item { margin-bottom: 20px; width:100%; }
+#products .image { float: left; margin-right: 20px; }
+#products .price { color: red; font-weight: bold; float: right; font-size: 14px; }
+#products .title { font-size: 14px; }
+#products .description { }
+#products .clear { clear: both; }
+#products .loadingPic { margin: auto; background: url(../images/loadingIcon.gif) no-repeat 0 0; padding-left: 25px; }

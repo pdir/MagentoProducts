@@ -1,0 +1,61 @@
+<?php
+
+/*
+ * Idee & Orginal Script von mxperts.de
+ * http://www.mxperts.de/blog/magento-daten-auf-externer-domain-anzeigen/
+ *
+ * PHP version 5
+ * @copyright  pdir / digital agentur 2016
+ * @author     Mathias Arzberger <develop@pdir.de>
+ * @package    MagentoProducts
+ * @license    GPL
+ * @filesource
+ */
+
+$JSON = $_GET['jsonp_callback'];
+$catID = trim(strip_tags($_GET['catID']));
+
+// Vorbereitung für maximale Anzahl Produkte
+// $count = trim(strip_tags($_GET['count']));
+
+require_once 'app/Mage.php';
+
+Mage::app();
+Mage::getSingleton('core/session', array('name' => 'frontend'));
+
+$_category = Mage::getModel('catalog/category')->load($catID);
+$product = Mage::getModel('catalog/product');
+$helper = Mage::helper('catalog/image');
+
+$_productCollection = $product->getCollection()
+				->addAttributeToSelect('*')
+				->addCategoryFilter($_category)
+				->load();
+
+// Produktdaten für JSON-Format vorbereiten
+$json_products = array();
+foreach ($_productCollection as $_product) {
+	$_product->getData();
+	$json_products[] = array('name' => '' . $helper->htmlEscape($_product->getName()) . '',
+		'url' => '' . $_product->getProductUrl() . '',
+		'image' => '' . $helper->init($_product, 'small_image')->resize(148, 148) . '',
+		'description' => '' . nl2br($_product->getShortDescription()) . '',
+		'price' => '' . $_product->getFormatedPrice() . '');
+}
+
+
+$items = array();
+// Headerdaten erstellen
+// Hier können Sie weitere benötigte Variablen übergeben
+$items['title'] = 'Magento - Produktdaten';
+//$items['link'] = 'http://www.ihrshop.de';
+//$items['description'] = 'Ihre Beschreibung';
+
+// Produktdaten einfügen
+$items['items'] = $json_products;
+// Daten ins JSON-Format kodieren
+$data = json_encode($items);
+// Daten ausgeben
+echo $JSON . '(' . $data . ');';
+
+?>
