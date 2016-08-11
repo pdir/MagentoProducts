@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE contaopackage>
+<extension name="cieContaoMagentoProducts" date="20160720">
+    <author user="ciemann" name="Matthias Mann" website="http://www.connectiteasy.de" />
+    <copyright>&amp;copy connectiteasy!</copyright>
+    <license>GPL</license>
+    <classification type="free" category="plugin" />
+    <release version="10000009" build="15" date="20120423" />
+    <contao minversion="20110029" maxversion="20110029" />
+    <language code="de">
+        <translator user="maarz" name="Mathias Arzberger" website="http://www.arzberger-krueger.de" />
+        <searchtags>Magento,Contao,Produkte,JSON,Ajax</searchtags>
+        <title>cieContaoMagentoProducts</title>
+        <teaser>Stellen Sie einfach Produkte aus verschiedenen Magento Installationen auf Ihrer Contao Website zur Verfügung.</teaser>
+        <description>&lt;p&gt;Mit der Erweiterung &lt;em&gt;cieContaoMagentoProducts&lt;/em&gt; k&amp;ouml;nne Sie auf einfache Weise Produkte aus vorhandenen Magento Kategorien &amp;uuml;ber ein einfaches Contentmodul in Ihre Contao Website integrieren.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Installation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1. cieContaoMagentoProducts &amp;uuml;ber Erweiterungsverwaltung installieren&lt;br /&gt;2. Den Inhalt der Datei unter TL_ROOT/files/cie/cie_products_data.php.txt per FTP oder aus der Dateiverwaltung kopieren und als cie_products_data.php im Root-Verzeichnis der gew&amp;uuml;nschten Magento Installation(en) ablegen.&lt;br /&gt;3. &amp;Uuml;ber &quot;Inhalte&quot; -[gt] &quot;Magento Produkte&quot; neue Kategorien f&amp;uuml;r das Content-Modul &lt;em&gt;hinzuf&amp;uuml;gen&lt;/em&gt;.&lt;br /&gt;4. In Datensatz bearbeiten eine Kategorie ID einer Magento Kategorie eingeben, einen Namen der Kategrie angeben und die Url zum in Punkt 2 abgelegten Script angeben. (Bsp. http://www.ihredomain.de/cie_products_data.php)&lt;br /&gt;5. Unter &quot;Layout&quot; -[gt] &quot;Themes&quot; -[gt] &quot;&lt;em&gt;IhrAktiverTheme&lt;/em&gt;&quot; -[gt] Frontend-Modul f&amp;uuml;r die Ausgabe der Produkdaten ein neues Modul vom Typ &quot;Magento Produkte&quot; anlegen&lt;br /&gt;6. Neu angelegtes Modul &amp;uuml;ber &quot;Inhalte&quot; -[gt] &quot;Artikel&quot; auf einer Inhaltseite platzieren und im Frontend anschauen :) fertig!&lt;/p&gt;</description>
+        <shop link="http://www.connectiteasy.de/kontakt.html" />
+    </language>
+    <language code="en">
+        <translator user="maarz" name="Mathias Arzberger" website="http://www.arzberger-krueger.de" />
+        <searchtags>Magento,Contao,Produkte,JSON,Ajax</searchtags>
+        <title>cieContaoMagentoProducts</title>
+        <teaser>Make products from different Magento installations available on your Contao website.</teaser>
+        <description>&lt;p&gt;With the &lt;em&gt;extension cieContaoMagentoProducts&lt;/em&gt; you can easily integrate existing products from Magento categories using a simple content module into your Contao website.&lt;/p&gt;
+&lt;p&gt;installation&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;First&lt;/strong&gt; install cieContaoMagentoProducts over extension management&lt;br /&gt; &lt;strong&gt;Second&lt;/strong&gt; Copy the content of the file under TL_ROOT/files/cie cie_products_data.php.txt[nbsp]via FTP or file manager and place it as cie_products_data.php[nbsp]in the root directory of the desired agento installation(s)&lt;br /&gt; &lt;strong&gt;Third&lt;/strong&gt; &quot;Content&quot; -[gt][nbsp]&quot;Magento products&quot; - add new categories for the frontend module&lt;br /&gt; &lt;strong&gt;4th&lt;/strong&gt; Set up a category ID of a  Magento category, specify a name and specify the url of the script stored in step 2. (Ex. http://www.yourdomain.de/cie_products_data.php)&lt;br /&gt; &lt;strong&gt;5th&lt;/strong&gt; Create front-end module for the output of the product data: add new module of type &quot;Magento products&quot; in &quot;Layout&quot; -[gt] &quot;Themes&quot; -[gt] &quot;YourActiveTheme&quot;&lt;br /&gt;&lt;strong&gt;6th&lt;/strong&gt; Add newly created module on &quot;content&quot; -[gt] &quot;articles&quot; on a content page :) and watch it!&lt;/p&gt;</description>
+        <shop link="http://www.connectiteasy.de/kontakt.html" />
+    </language>
+</extension>
