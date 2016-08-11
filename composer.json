@@ -23,7 +23,8 @@
   "extra":{
     "contao": {
       "sources":{
-        "src": "system/modules/MagentoProducts"
+        "src": "system/modules/MagentoProducts",
+        "files": "files"
       }
     }
   }
